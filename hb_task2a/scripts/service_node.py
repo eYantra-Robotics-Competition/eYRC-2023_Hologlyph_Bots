@@ -44,18 +44,6 @@ class ServiceNode(Node):
         x = self.shape_list[1][0][(request.request_goal-1)]
         y = self.shape_list[1][1][(request.request_goal-1)]
         
-        plt.plot(x, y, marker='o', linestyle='-', color='b', label='Data Points')
-        print(x,y)
-        self.x_values.append(x)
-        self.y_values.append(y)
-        self.count += 1
-        if self.count == 90:
-            plt.xlabel('X-axis Label')
-            plt.ylabel('Y-axis Label')
-            plt.title('Plot of X and Y')
-            plt.legend()  # Show legend based on the 'label' parameter in plt.plot()
-            plt.show()
-
         msg.data = self.shape_list[0]
         self.publish_shape.publish(msg)
         
