@@ -78,7 +78,6 @@ class HBController(Node):
     def send_request(self, request_goal):
         self.req.request_goal = request_goal
         self.future = self.cli.call_async(self.req)
-        time.sleep(1)
         
 
     def inverse_kinematics():
