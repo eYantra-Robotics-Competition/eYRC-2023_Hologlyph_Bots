@@ -2,6 +2,6 @@
 
 ## Theme developers
   - Arjun Sadananda
-  - Srivenkateshwar
   - Bhargav HS
+  - Srivenkateshwar
   - Abhishek Joshi
