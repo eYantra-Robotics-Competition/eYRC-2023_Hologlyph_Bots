@@ -1,6 +1,6 @@
 # eYRC-2023_Hologlyph_Bots
 
-#Theme developers
+## Theme developers
   - Arjun Sadananda
   - Srivenkateshwar
   - Bhargav HS
