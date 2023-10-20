@@ -7,7 +7,7 @@
 *           		Hologlyph Bots (HB) Theme (eYRC 2023-24)
 *        		===============================================
 *
-*  This script is to implement Task 2A of Hologlyph Bots (HB) Theme (eYRC 2023-24).
+*  This script is to implement Task 2B of Hologlyph Bots (HB) Theme (eYRC 2023-24).
 *  
 *  This software is made available on an "AS IS WHERE IS BASIS".
 *  Licensee/end user indemnifies and will keep e-Yantra indemnified from
