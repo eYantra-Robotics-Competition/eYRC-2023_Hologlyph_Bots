@@ -1,5 +1,4 @@
 #######################################     DO NOT MODIFY THIS  FILE     ##########################################
-
 import numpy as np
 import matplotlib.pyplot as plt
 from my_robot_interfaces.srv import NextGoal             
@@ -9,7 +8,6 @@ import random
 import time
 from my_robot_interfaces.msg import Goal           
 from my_robot_interfaces.msg import Shape           
-
 
 class ServiceNode(Node):
 
@@ -24,7 +22,6 @@ class ServiceNode(Node):
         self.publish_shape_2  = self.create_publisher(Shape, 'shape_2', 10)
         self.publish_shape_3  = self.create_publisher(Shape, 'shape_3', 10)
 
-        # self.timer = self.create_timer(5.0, self.publish_messages)  # 5 seconds interval
 
 def generate_decagon(side_length, x_center, y_center, theta, num_points):
     angles = np.linspace(0, 2 * np.pi, 10, endpoint=False) + theta
@@ -108,11 +105,6 @@ def main(args=None):
     shape2_x,shape2_y,shape2_theta  = generate_square(sq_side_length, 150, 250, sq_theta, 100)
     shape3_x,shape3_y,shape3_theta  = generate_decagon(dec_side_length, 400, 400, dec_theta, 100)
     
-    service_node.shape_info = [tri_side_length,tri_theta, sq_side_length, sq_theta, dec_side_length, dec_theta]
-    service_node.shape_1_data = [shape1_x]
-    service_node.shape_2_data = [shape2_x,shape2_y,shape2_theta]
-    service_node.shape_3_data = [shape3_x,shape3_y,shape3_theta]
-
     msg_bot_1 = Goal()
     msg_bot_2 = Goal()
     msg_bot_3 = Goal()
@@ -154,6 +146,8 @@ def main(args=None):
         service_node.publish_shape_1.publish(msg_shape_1)
         service_node.publish_shape_2.publish(msg_shape_2)
         service_node.publish_shape_3.publish(msg_shape_3)
+        
+        time.sleep(1)
 
     rclpy.shutdown()
         
