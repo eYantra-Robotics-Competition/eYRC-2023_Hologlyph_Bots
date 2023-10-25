@@ -62,7 +62,7 @@ def generate_random_value(min_value=1, max_value=5):
     return random.randint(min_value, max_value)
 
 
-def generate_hexagon(side_length=100, x_center=0, y_center=0, theta=0, num_points=100):
+def generate_hexagon(side_length=100, x_center=0, y_center=0, theta=0, num_points=50):
     angles = np.linspace(0, 2 * np.pi, 6, endpoint=False) + theta
     x_vertices = x_center + side_length * np.cos(angles)
     y_vertices = y_center + side_length * np.sin(angles)
@@ -77,7 +77,7 @@ def generate_hexagon(side_length=100, x_center=0, y_center=0, theta=0, num_point
     
     return x_interp.tolist(), y_interp.tolist(), theta
 
-def generate_rectangle(width=100, height=50, x_center=0, y_center=0, theta=0, num_points=100):
+def generate_rectangle(width=100, height=50, x_center=0, y_center=0, theta=0, num_points=50):
     half_width = width / 2
     half_height = height / 2
     
@@ -99,7 +99,7 @@ def generate_rectangle(width=100, height=50, x_center=0, y_center=0, theta=0, nu
     
     return x.tolist(), y.tolist(), theta
 
-def generate_triangle(side_length=100, x_center=0, y_center=0, theta=0, num_points=100):
+def generate_triangle(side_length=100, x_center=0, y_center=0, theta=0, num_points=50):
     # Calculate the height of the equilateral triangle
     height = (np.sqrt(3) / 2) * side_length
     
@@ -129,7 +129,7 @@ def generate_triangle(side_length=100, x_center=0, y_center=0, theta=0, num_poin
     
     return x.tolist(), y.tolist(), theta
 
-def generate_square(side_length=100, x_center=0, y_center=0, theta=0, num_points=100):
+def generate_square(side_length=100, x_center=0, y_center=0, theta=0, num_points=50):
     half_length = side_length / 2
     
     # Define the vertices of the square
@@ -160,7 +160,7 @@ def generate_square(side_length=100, x_center=0, y_center=0, theta=0, num_points
     
     return x.tolist(), y.tolist(), theta
 
-def generate_decagon(side_length=100, x_center=0, y_center=0, theta=0, num_points=100):
+def generate_decagon(side_length=100, x_center=0, y_center=0, theta=0, num_points=50):
     angles = np.linspace(0, 2 * np.pi, 10, endpoint=False) + theta
     x_vertices = x_center + side_length * np.cos(angles)
     y_vertices = y_center + side_length * np.sin(angles)
