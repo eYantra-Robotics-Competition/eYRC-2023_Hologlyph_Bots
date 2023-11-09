@@ -24,17 +24,17 @@ class ServiceNode(Node):
 
     def publish_shapes(self):
 
-        tri_side_length = np.random.randint(100, 200)
-        sq_side_length  = np.random.randint(100, 200)
-        dec_side_length = np.random.randint(100, 200)
+        tri_side_length = np.random.randint(50, 90)
+        sq_side_length  = np.random.randint(50, 90)
+        dec_side_length = np.random.randint(50, 80)
 
         tri_theta = np.random.uniform(0, 2*np.pi)
         sq_theta  = np.random.uniform(0, 2*np.pi)
         dec_theta = np.random.uniform(0, 2*np.pi)
 
-        shape1_x, shape1_y, shape1_theta  = generate_triangle(tri_side_length, 350, 150, tri_theta, 100)
+        shape1_x, shape1_y, shape1_theta  = generate_triangle(tri_side_length, 300, 200, tri_theta, 100)
         shape2_x, shape2_y, shape2_theta  = generate_square(sq_side_length, 150, 250, sq_theta, 100)
-        shape3_x, shape3_y, shape3_theta  = generate_decagon(dec_side_length, 400, 400, dec_theta, 100)
+        shape3_x, shape3_y, shape3_theta  = generate_decagon(dec_side_length, 320, 380, dec_theta, 100)
 
         msg_bot_1 = Goal()
         msg_bot_2 = Goal()
